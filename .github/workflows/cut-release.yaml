@@ -22,11 +22,11 @@ jobs:
     uses: open-goal/mod-bundling-tools/.github/workflows/mod-bundler.yml@v1
     with:
       semverBump: ${{ inputs.bump }}
-      metadataName: "Dragon Jak Ball Mods"
+      metadataName: "DragonJak"
       metadataDescription: "Dragon ball in Jak and daxter !"
       metadataSupportedGames: "jak1"
-      metadataAuthors: "FUNKI DELIRE,barg,vase"
-      metadataTags: "Custom Map, Custom Model,Custom sound,gameplay-mod"
+      metadataAuthors: "barg,vase"
+      metadataTags: "gameplay-mod"
       metadataWebsiteUrl: "https://github.com/FUNKI-DELIRE-LEON-GAGIN/Dragon-Jak-Ball"
       toolingRepo: "OpenGOAL-Mods/OG-Mod-Base"
       gameAssetsDir: "game/assets"
