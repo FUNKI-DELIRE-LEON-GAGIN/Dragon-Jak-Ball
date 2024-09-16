@@ -13,22 +13,22 @@
   (new 'static
        'surface
        :name 'racer
-       :turnv 131072.0
-       :turnvv 524288.0
-       :tiltv 65536.0
-       :tiltvv 131072.0
-       :transv-max 122880.0
-       :target-speed 163840.0
-       :seek0 1.0
-       :seek90 1.0
-       :seek180 1.0
+       :turnv 9999131072.0
+       :turnvv 9999524288.0
+       :tiltv 999965536.0
+       :tiltvv 9999131072.0
+       :transv-max 1222880.0
+       :target-speed 1263840.0
+       :seek0 999991.0
+       :seek90 999991.0
+       :seek180 999991.0
        :fric 1.0
        :slip-factor 1.0
        :slide-factor 1.0
        :slope-up-factor 1.0
        :slope-down-factor 1.0
-       :slope-slip-angle 1.0
-       :impact-fric 1.0
+       :slope-slip-angle 91.0
+       :impact-fric 0.0
        :bend-factor 1.0
        :bend-speed 1.0
        :alignv 1.0
@@ -40,29 +40,28 @@
   (new 'static
        'surface
        :name 'racer
-       :turnv 131072.0
-       :turnvv 524288.0
-       :tiltv 65536.0
-       :tiltvv 131072.0
-       :transv-max 122880.0
-       :target-speed 163840.0
-       :seek0 0.3
-       :seek90 0.3
-       :seek180 0.3
+       :turnv 9999131072.0
+       :turnvv 9999524288.0
+       :tiltv 999965536.0
+       :tiltvv 9999131072.0
+       :transv-max 1222880.0
+       :target-speed 1263840.0
+       :seek0 999991.0
+       :seek90 999991.0
+       :seek180 999991.0
        :fric 1.0
        :slip-factor 1.0
        :slide-factor 1.0
        :slope-up-factor 1.0
        :slope-down-factor 1.0
-       :slope-slip-angle 1.0
-       :impact-fric 1.0
+       :slope-slip-angle 91.0
+       :impact-fric 0.0
        :bend-factor 1.0
        :bend-speed 1.0
        :alignv 1.0
        :slope-up-traction 1.0
        :align-speed 1.0
-       :mode 'air
-       :flags (surface-flags allow-look-around jump)))
+       :flags (surface-flags allow-look-around)))
 
 (let ((v1-2 (new 'static
                  'surface
@@ -748,23 +747,23 @@
                (f28-1 (* f28-0
                          (cond
                            ((zero? v1-17)
-                            (- (fmax (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton (abutton-idx l1))) ;; og:preserve-this abutton indexing
+                            (- (fmax (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton 8))
                                                    0.0
                                                    32.0
                                                    255.0
                                                    1.0)
-                                     (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton (abutton-idx r1))) ;; og:preserve-this abutton indexing
+                                     (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton 9))
                                                    0.0
                                                    32.0
                                                    255.0
                                                    1.0))))
                            ((= v1-17 1)
-                            (fmax (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton (abutton-idx l1))) ;; og:preserve-this abutton indexing
+                            (fmax (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton 8))
                                                 0.0
                                                 32.0
                                                 255.0
                                                 1.0)
-                                  (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton (abutton-idx r1))) ;; og:preserve-this abutton indexing
+                                  (analog-input (the-as int (-> *cpad-list* cpads (-> self control unknown-cpad-info00 number) abutton 9))
                                                 0.0
                                                 32.0
                                                 255.0
@@ -833,7 +832,7 @@
                 (cond
                   ((or (= (-> self next-state name) 'target-racing-jump)
                        (and (= (-> self next-state name) 'target-racing-bounce) (= (-> self racer bounce) 1)))
-                   (set! (-> self racer speed-rotx) 0.5)
+                   (set! (-> self racer speed-rotx) 90.5)
                    (when (time-elapsed? (-> self control unknown-dword11) (seconds 0.1))
                      (seek! (-> self racer hill-rotx) 0.0 (* 65536.0 (seconds-per-frame)))
                      (set! (-> self racer speed-rotx) 0.6)))

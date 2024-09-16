@@ -310,6 +310,7 @@
       0)
   :exit
     (behavior ()
+      (play-sound-file "end_kameha_ultrainstinc.mp3" 100)
       (set! (-> self des-cam-entity) #f)
       (let ((a1-0 (new 'stack-no-clear 'event-message-block)))
         (set! (-> a1-0 from) self)
@@ -524,13 +525,7 @@
 (defstate robotboss-yellow-dark-bomb (robotboss)
   :enter
     (behavior ()
-      (set! (-> self old-loc quad) (-> self desired-loc quad))
-      (set-vector! (-> self desired-loc) 16384.0 -81920.0 716800.0 1.0)
-      (set! (-> self loc-t) 0.0)
-      (set! (-> self loc-t-start) (-> *display* game-frame-counter))
-      (set! (-> self loc-t-duration) (seconds 4))
-      (set! (-> self desired-pool-y) -16384.0)
-      (play-ambient (-> self ambient) "GOL-AM01" #t (the-as vector #f)))
+      (play-sound-file "end_dragonfist.mp3" 100))
   :trans
     (behavior ()
       (robotboss-always-trans (the-as (state robotboss) #f))
@@ -1022,7 +1017,7 @@
            (send-event (ppointer->process gp-1) 'anim-mode 'play1)
            (send-event (ppointer->process gp-1) 'rot-quat (-> self root quat))
            ;; og:preserve-this the zero passed here was missing in the original game, but is a bug that causes undefined behavior
-           (send-event (ppointer->process gp-1) 'art-joint-anim "robotboss-redeco-red-last-hit" 0)))
+           (send-event (ppointer->process gp-1) 'art-joint-anim "robotboss-redeco-red-last-hit" 0 (play-sound-file "end_dialogue_im_goku.mp3" 100))))
         ((and (> (-> self hits-to-go) 0) (-> self took-hit))
          (if (not (play-ambient (-> self ambient) "GOL-AM17" #t (the-as vector #f)))
            (play-ambient (-> self ambient) "MAI-AM06" #t (the-as vector #f)))
@@ -1948,3 +1943,4 @@
              :yellow-bomb-time 3600.0))
   (go robotboss-blue-wait)
   (none))
+

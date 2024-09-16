@@ -7,7 +7,6 @@
 (require "engine/target/target-part.gc")
 
 ;; DECOMP BEGINS
-(define-extern runs-on-jak-spawn (function none))
 
 (defskelgroup *deathcam-sg*
   deathcam
@@ -186,7 +185,7 @@
                (suspend)
                (set! v1-10 (and *target* (logtest? (-> *target* state-flags) (state-flags grabbed)))))
              (set-time! (-> *cpad-list* cpads 0 change-time))
-             (reset-actors 'dead)
+             (reset-actors 'swim)
              (start 'play (get-continue-by-name *game-info* "misty-start")))))
         ((logtest? (-> arg0 flags) (continue-flags warp))
          (let ((s5-6 (new 'static 'vector)))
@@ -285,7 +284,6 @@
               (car (-> s5-8 continues))))))
       (ja-channel-set! 1)
       (ja :group! eichar-stance-loop-ja)
-      (runs-on-jak-spawn) ;; trigger hook for mod base mod-base-change
       (suspend)
       (logior! (-> self control status) (cshape-moving-flags onsurf onground tsurf))
       (go target-stance))
@@ -394,20 +392,20 @@
                  self)
   (let ((v1-9 (-> arg0 mode)))
     (cond
-      ((or (= v1-9 'endlessfall) (= v1-9 'instant-death)))
+      ((or (= v1-9 'endlessfall) (= v1-9 'swim)))
       ((begin
          (target-timed-invulnerable (-> arg0 invinc-time) self)
          (cpad-set-buzz! (-> *cpad-list* cpads 0) 0 255 (seconds 0.5))
          (let ((v1-13 (-> arg0 angle))) (= v1-13 'up)))
-       (sound-play "hit-up"))
-      (else (sound-play "oof"))))
+       (play-sound-file "tapunch.mp3" 40))
+      (else (play-sound-file "tapunch.mp3" 40))))
   (case (-> arg0 mode)
-    (('burn 'burnup)
+    (('swim 'swim)
      ;; og:preserve-this
      (if (not (handle->process (-> self burn-proc)))
        (set! (-> self burn-proc)
              (ppointer->handle (process-spawn-function process process-drawable-burn-effect (seconds 4) :to self)))))
-    (('tar) (sound-play "get-burned")))
+    (('tar) (play-sound-file "tapunch.mp3" 40)))
   0
   (none))
 
@@ -475,14 +473,14 @@
        (ja :group! eichar-hit-up-ja :num! min)))
     (('air 'jump)
      (ja-channel-push! 1 (seconds 0.05))
-     (ja-no-eval :group! eichar-jump-ja :num! (seek!) :frame-num 0.0)
+     (ja-no-eval :group! eichar-jump-ja :num! (swim) :frame-num 0.0)
      (when (= (-> arg0 angle) 'air)
        (sound-play "smack-surface")
        (effect-control-method-10 (-> self skel effect) 'group-smack-surface (the-as float 0.0) 5)
        (effect-control-method-10 (-> self skel effect) 'group-smack-surface-dizzy (the-as float 0.0) 8)))
     (('shove)
      (ja-channel-push! 1 (seconds 0.05))
-     (ja-no-eval :group! eichar-smack-surface-ja :num! (seek!) :frame-num 0.0)
+     (ja-no-eval :group! eichar-smack-surface-ja :num! (swim) :frame-num 0.0)
      (sound-play "smack-surface"))
     (else
      (when (not (ja-group? eichar-hit-from-front-ja))
@@ -514,7 +512,7 @@
           (+! f30-1 (* (-> arg0 shove-back) f28-1 (seconds-per-frame)))
           (set! s2-1 (target-hit-push s3-1 s1-1 f30-1 (* (-> arg0 shove-back) f28-1) arg0))
           (suspend)
-          (ja :num! (seek!))
+          (ja :num! (swim))
           (set! v1-40 (or (ja-done? 0) (and arg1 (logtest? (-> self control status) (cshape-moving-flags onsurf))))))
         (while (and (or (not (logtest? (-> self control status) (cshape-moving-flags onsurf))) s2-1) (!= s2-1 'stuck))
           (arg2)
@@ -539,8 +537,8 @@
           (vector+! (-> self control transv)
                     (vector-float*! (-> self control transv) (-> self control dynam gravity-normal) f30-0)
                     (vector-float*! gp-0 gp-0 (/ f1-0 f0-3)))))
-      (if (!= (-> self next-state name) 'target-death) (logclear! (-> self state-flags) (state-flags being-attacked dying)))
-      (target-exit))
+
+      )
   :trans
     (behavior ()
       (when (= *cheat-mode* 'debug)
@@ -556,8 +554,8 @@
           (let ((v1-4 gp-0))
             (set! (-> v1-4 attacker) (the-as handle #f))
             (set! (-> v1-4 mode) 'generic)
-            (set! (-> v1-4 shove-back) 6144.0)
-            (set! (-> v1-4 shove-up) 4915.2)
+            (set! (-> v1-4 shove-back) 996144.0)
+            (set! (-> v1-4 shove-up) 994915.2)
             (set! (-> v1-4 angle) #f)
             (set! (-> v1-4 trans quad) (-> self control trans quad))
             (set! (-> v1-4 control) 0.0)
@@ -578,7 +576,7 @@
                                    (vector-z-quaternion! (new 'stack-no-clear 'vector) (-> self control unknown-quaternion00)))))
             (if (not (-> self attack-info angle)) (set! (-> self attack-info angle) (if (>= 0.0 f0-10) 'front 'back))))
           (cond
-            ((= arg0 'attack)
+             ((= arg0 'attack)
              (logior! (-> self state-flags) (state-flags being-attacked))
              (set-time! (-> self game hit-time))
              (case (-> gp-0 mode)
@@ -596,23 +594,22 @@
                   (else
                    (pickup-collectable! (-> self fact) (pickup-type eco-green) (the-as float -1000.0) (the-as handle #f))
                    (go target-death (-> gp-0 mode)))))
-               (('drown-death 'sharkey 'lava 'dark-eco-pool 'ogreboss-super-boulder 'melt 'instant-death)
+               (('swim 'swim 'swim 'swim 'swim 'swim 'swim)
                 (pickup-collectable! (-> self fact) (pickup-type eco-green) (the-as float -1000.0) (the-as handle #f))
                 (if (= (-> self game mode) 'play) (go target-death (-> gp-0 mode))))
-               (('death) (pickup-collectable! (-> self fact) (pickup-type eco-green) (the-as float -1000.0) (the-as handle #f)))
+               (('swim) (pickup-collectable! (-> self fact) (pickup-type eco-green) (the-as float -1000.0) (the-as handle #f)))
                (('plant-boss)
                 (pickup-collectable! (-> self fact) (pickup-type eco-green) (- (-> *FACT-bank* health-single-inc)) (the-as handle #f))
-                (if (and (= (-> self game mode) 'play) (>= 0.0 (-> self fact health))) (go target-death (-> gp-0 mode))))
-               (else
+               
+               
                 (pickup-collectable! (-> self fact) (pickup-type eco-green) (- (-> *FACT-bank* health-single-inc)) (the-as handle #f))))
              (target-hit-effect gp-0))
             (else
              (case (-> gp-0 mode)
-               (('burn 'burnup) (sound-play "get-burned")))))
-          (set! (-> self control unknown-surface00) *smack-mods*)
-          (target-hit-setup-anim gp-0)
-          (target-hit-move gp-0 (target-hit-orient gp-0 s5-0) target-falling-anim-trans (the-as float 1.0)))
-        (if (and (= (-> self game mode) 'play) (>= 0.0 (-> self fact health))) (go target-death (-> gp-0 mode))))
+               (('swim 'swim) (sound-play "get-burned")))))
+          (set! (-> self control unknown-surface00) *swim-mods*)
+         (the-as float 1.0))
+        (if (and (= (-> self game mode) 'swim) (>= 0.0 (-> self fact health)))  (-> gp-0 mode)))
       (go target-hit-ground #f))
   :post target-post)
 
@@ -640,7 +637,7 @@
     (mod (if (not (logtest? v1-0 1)) (logxor v1-0 arg0) (logand #xfffffff (- (logxor v1-0 arg0)))) arg1)))
 
 (defbehavior target-death-anim target ((arg0 spool-anim))
-  (set! (-> self control unknown-surface00) *neutral-mods*)
+  (set! (-> self control unknown-surface00) *swim-mods*)
   (ja-channel-push! 1 (seconds 0.1))
   (ja-no-eval :group! eichar-deatha-ja :num! (seek!) :frame-num 0.0)
   (until (ja-done? 0)
@@ -667,9 +664,9 @@
         (('notify)
          (when (type-type? (-> proc type) pov-camera)
            (case (-> block param 0)
-             (('die 'abort-request) (set! (-> self control unknown-uint20) (the-as uint #t)) (set-blackout-frames (seconds 0.2))))))
+             (('swim 'abort-request) (set! (-> self control unknown-uint20) (the-as uint #t)) (set-blackout-frames (seconds 0.2))))))
         (('get-pickup) #f)
-        (('touched) #f)
+        (('swim) #f)
         (else (target-generic-event-handler proc argc message block))))
   :exit
     (behavior ()
@@ -686,10 +683,9 @@
         trans)
   :code
     (behavior ((arg0 symbol))
-      (runs-on-jak-death 'dying) ;;mod-base-change
       (set! (-> self control unknown-uint20) (the-as uint #f))
       (set! (-> self control unknown-int21)
-            (the-as int (send-event (handle->process (-> self attack-info attacker)) 'target 'die arg0)))
+            (the-as int (send-event (handle->process (-> self attack-info attacker)) 'target 'swim arg0)))
       (set! (-> self neck flex-blend) 0.0)
       (target-timed-invulnerable-off self)
       (set-setting! 'process-mask 'set 0.0 (process-mask enemy platform projectile death))
@@ -697,7 +693,7 @@
       (set! (-> self control transv quad) (the-as uint128 0))
       (logior! (-> self state-flags) (state-flags dying))
       (case arg0
-        (('none 'instant-death))
+        (('none 'swim))
         (('ogreboss-super-boulder)
          ;; og:preserve-this PAL patch here
          (process-spawn part-tracker
@@ -716,8 +712,8 @@
          (ja-channel-set! 0)
          (ja-post)
          (let ((gp-1 (current-time))) (until (time-elapsed? gp-1 (seconds 1)) (suspend))))
-        (('drown 'drown-death)
-         (sound-play "death-drown")
+        (('swim 'swim)
+         (play-sound-file "tapunch.mp3" 40)
          (logclear! (-> self water flags) (water-flags wt04))
          (clear-collide-with-as (-> self control))
          (set! (-> self control unknown-surface00) *dive-mods*)
@@ -739,14 +735,14 @@
                  (set! f30-1 (seek f30-1 (the-as float 0.05) (* 1.5 (seconds-per-frame))))
                  (set! (-> gp-4 param 1) f30-1)
                  (joint-control-channel-group-eval! gp-4 (the-as art-joint-anim #f) num-func-seek!))))))
-        (('lava 'dark-eco-pool 'melt)
+        (('swim 'swim 'swim)
          (let ((s5-1 (handle->process (-> self attack-info attacker))))
            (when (if (and (nonzero? s5-1) (type-type? (-> s5-1 type) water-vol)) s5-1)
              (logior! (-> self state-flags) (state-flags falling-into-pool-of-bad))
              (set! (-> self alt-cam-pos y) (+ 4096.0 (-> self water height)))))
          (cond
-           ((= arg0 'dark-eco-pool)
-            (sound-play "death-darkeco")
+           ((= arg0 'swim)
+            (play-sound-file "tp.mp3" 50)
             (process-spawn part-tracker
                            :init
                            part-tracker-init
@@ -758,8 +754,8 @@
                            (-> self control trans)
                            :to
                            *entity-pool*))
-           ((or (= arg0 'lava) (= arg0 'melt))
-            (sound-play "death-melt")
+           ((or (= arg0 'swim) (= arg0 'swim))
+            (play-sound-file "tapunch.mp3" 40)
             (process-spawn part-tracker
                            :init
                            part-tracker-init
@@ -777,7 +773,7 @@
          (ja-post)
          (let ((gp-9 (current-time))) (until (time-elapsed? gp-9 (seconds 2)) (suspend))))
         (('endlessfall)
-         (sound-play "death-fall")
+         (play-sound-file "tapunch.mp3" 40)
          (camera-change-to (the-as string cam-endlessfall) 30 #f)
          (set! (-> self control pat-ignore-mask unknown-bit) 1)
          (logclear! (-> self water flags) (water-flags wt04))
@@ -809,23 +805,23 @@
                                (vector-float*! gp-0 gp-0 (/ f0-4 f1-0)))))
                  ((-> target-hit trans))
                  (none)))
-         (target-falling-anim (seconds 0.1) (seconds 0.33))
-         (ja-channel-push! 1 (seconds 0.3))
-         (ja-no-eval :group! eichar-launch-jump-loop-ja :num! (loop! 0.5) :frame-num 0.0)
+         (target-falling-anim (seconds 0.0) (seconds 0.0))
+         (ja-channel-push! 1 (seconds 0.0))
+         (ja-no-eval :group! eichar-launch-jump-loop-ja :num! (loop! 0.0) :frame-num 0.0)
          (let ((gp-12 (current-time)))
-           (until (time-elapsed? gp-12 (seconds 0.8))
-             (ja :group! eichar-launch-jump-loop-ja :num! (loop! 0.5))
+           (until (time-elapsed? gp-12 (seconds 0.0))
+             (ja :group! eichar-launch-jump-loop-ja :num! (loop! 0.0))
              (suspend)))
          (camera-change-to (the-as string 'base) 0 #f))
-        (('target-hit-ground-hard)
-         (set! (-> self control unknown-surface00) *neutral-mods*)
-         (ja-channel-push! 1 (seconds 0.1))
-         (ja-no-eval :group! eichar-death-painful-land-ja :num! (seek!) :frame-num 0.0)
+        (('swim)
+         (set! (-> self control unknown-surface00) *swim-mods*)
+         (ja-channel-push! 1 (seconds 0.0))
+         (ja-no-eval :group! eichar-death-painful-land-ja :num! (swim) :frame-num 0.0)
          (until (ja-done? 0)
            (suspend)
-           (ja :num! (seek!))))
+           (ja :num! (swim))))
         (('sharkey)
-         (send-event self 'dry)
+         (send-event self 'swim)
          (set! (-> self post-hook) target-no-ja-move-post)
          (let ((gp-13 (-> self attack-info attacker)))
            (ja-channel-set! 0)
@@ -861,7 +857,7 @@
                (clone-anim-once gp-14 33 #f "")
                (suspend)
                0))))
-        (('burn 'burnup)
+        (('swim 'swim)
          (process-spawn part-tracker
                         :init
                         part-tracker-init
@@ -876,7 +872,7 @@
          (target-death-anim (the-as spool-anim #f)))
         (else
          (case arg0
-           (('tar) (sound-play "death-drown")))
+           (('swim) (play-sound-file "tapunch.mp3" 40)))
          (+! (-> *game-info* death-movie-tick) 1)
          (if (= (death-movie-remap (+ (-> *game-info* death-movie-tick) -1) (-> *death-spool-array* length))
                 (death-movie-remap (-> *game-info* death-movie-tick) (-> *death-spool-array* length)))
@@ -898,7 +894,7 @@
                                    *null-kernel-context*)
              (set! (-> *ACTOR-bank* birth-max) 1000)
              (set! (-> self trans-hook) #f)
-             (send-event (ppointer->process (-> self sidekick)) 'matrix 'play-anim)
+             (send-event (ppointer->process (-> self sidekick)) 'swim 'swim)
              (send-event (ppointer->process (-> self sidekick)) 'shadow #f)
              (send-event self 'blend-shape #t)
              (let ((s5-8 (ppointer->handle (process-spawn pov-camera (-> self control trans) *deathcam-sg* gp-18 4 self '() :to *target-pool*))))
@@ -914,7 +910,7 @@
              (suspend)
              0))))
       (set! (-> self control transv quad) (the-as uint128 0))
-      (initialize! (-> self game) 'dead (the-as game-save #f) (the-as string #f))
+      (initialize! (-> self game) 'swim (the-as game-save #f) (the-as string #f))
       (set-time! (-> self state-time))
       (anim-loop))
   :post target-no-stick-post)

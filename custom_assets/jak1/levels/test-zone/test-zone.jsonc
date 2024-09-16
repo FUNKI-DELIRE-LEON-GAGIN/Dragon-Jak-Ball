@@ -61,7 +61,7 @@
   // All art groups you want to use in your custom level. Will add their models and corresponding textures to the FR3 file.
   // Note: You will still have to add them to your level's .gd file.
   // "art_groups": ["plat-ag"],
-  "art_groups": ["babak-ag", "plat-ag", "plat-eco-ag"],
+  "art_groups": ["babak-ag","ogreboss-ag","racer-ag", "plat-ag", "plat-eco-ag","evilbro-ag","plant-ag","misty-battlecontroller-ag","yeti-ag"],
 
   // If you have any custom models in the "custom_assets/jak1/models/custom_levels" folder that you want to use in your level, add them to this list.
   // Note: Like with art groups, these should also be added to your level's .gd file.
@@ -87,8 +87,8 @@
   // adding ambient sounds, level name hints, etc.
   "ambients": [
     {
-      "trans": [-21.6238, 20.0496, 17.1191, 10.0],
-      "bsphere": [-21.6238, 20.0496, 17.1191, 15.0],
+      "trans": [-65.54, 565.30, 623.81, 10.0],
+      "bsphere": [-65.54, 565.30, 63.81, 15.0],
       "lump": {
         "name": "test-ambient",
         "type": "'hint",
@@ -100,58 +100,1190 @@
 
   "actors" : [
     {
-      "trans": [-21.6238, 20.0496, 17.1191], // translation
+      "trans": [-228.79, 569.01, 93.40], // translation
       "etype": "fuel-cell",  // actor type
       "game_task": "(game-task none)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
-      "bsphere": [-21.6238, 19.3496, 17.1191, 10], // bounding sphere
+      "bsphere": [-228.79, 569.01, 93.40, 10], // bounding sphere
       "lump": {
         "name": "test-fuel-cell",
         "eco-info": ["cell-info", "(game-task none)"]
       }
     },
 
-    {
-      "trans": [-15.2818, 15.2461, 17.1360], // translation
-      "etype": "crate",  // actor type
-      "game_task": "(game-task none)", // associated game task (for powercells, etc)
-      "quat": [0, 0, 0, 1], // quaternion
-      "bsphere": [-15.2818, 15.2461, 17.1360, 10], // bounding sphere
-      "lump": {
-        "name": "test-crate",
-        "crate-type": "'steel",
-        "eco-info": ["eco-info", "(pickup-type money)", 10]
-      }
-    },
+{
+  "trans": [-128.51, 565.31, 1.27],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-128.51, 565.31, 1.27, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-130.00, 565.31, 2.50],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-130.00, 565.31, 2.50, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-131.20, 565.31, 4.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-131.20, 565.31, 4.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-132.10, 565.31, 6.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-132.10, 565.31, 6.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-132.50, 565.31, 8.50],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-132.50, 565.31, 8.50, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-132.10, 565.31, 11.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-132.10, 565.31, 11.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-131.20, 565.31, 13.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-131.20, 565.31, 13.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-130.00, 565.31, 14.50],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-130.00, 565.31, 14.50, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-128.50, 565.31, 16.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-128.50, 565.31, 16.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-126.90, 565.31, 17.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-126.90, 565.31, 17.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-125.10, 565.31, 18.50],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-125.10, 565.31, 18.50, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-123.00, 565.31, 19.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-123.00, 565.31, 19.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-121.00, 565.31, 18.50],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-121.00, 565.31, 18.50, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-119.50, 565.31, 17.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-119.50, 565.31, 17.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-118.00, 565.31, 15.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-118.00, 565.31, 15.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-117.00, 565.31, 13.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-117.00, 565.31, 13.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-116.30, 565.31, 11.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-116.30, 565.31, 11.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-116.00, 565.31, 8.50],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-116.00, 565.31, 8.50, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-116.30, 565.31, 6.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-116.30, 565.31, 6.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-117.00, 565.31, 4.00],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-117.00, 565.31, 4.00, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+},
+{
+  "trans": [-118.00, 565.31, 2.50],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-118.00, 565.31, 2.50, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 10]
+  }
+}
+,
+{
+  "trans": [-253.96, 649.18, -147.39],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-253.96, 649.18, -147.39, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 50]
+  }
+}
+,
+{
+  "trans": [-122.73, 573.74, -220.20],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-122.73, 573.74, -220.20, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 50]
+  }
+}
+,
+{
+  "trans": [-127.73, 573.74, -220.20],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-127.73, 573.74, -220.20, 10],
+  "lump": {
+    "name": "test-crate",
+    "crate-type": "'steel",
+    "eco-info": ["int32", 7, 1]
+  }
+}
+,
+{
+  "trans": [-168.64, 565.31, 86.36],
+  "etype": "explorer",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-168.64, 565.31, 86.36, 10],
+  "lump": {
+    "name": "YAJIROBE",
+    "crate-type": "'explorer",
+    "eco-info": ["eco-info", "(pickup-type none)", 10]
+  }
+},
+{
+  "trans": [-119.30, 565.31, 11.00],
+  "etype": "babake",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-116.30, 565.31, 11.00, 10],
+  "lump": {
+    "name": "babake12",
+    "crate-type": "'babake",
+    "eco-info": ["eco-info", "(pickup-type none)", 10]
+  }
+},
+{
+  "trans": [-93.80, 565.31, 88.65],
+  "etype": "yakow",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-93.80, 565.31, 88.65, 10],
+  "lump": {
+    "name": "yakow",
+    "crate-type": "'yakow",
+    "eco-info": ["eco-info", "(pickup-type none)", 10]
+  }
+},
+{
+  "trans": [-123.80, 565.31, 92.65],
+  "etype": "yakow",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-93.80, 565.31, 88.65, 10],
+  "lump": {
+    "name": "yakow",
+    "crate-type": "'yakow",
+    "eco-info": ["eco-info", "(pickup-type none)", 10]
+  }
+},
+{
+  "trans": [99.17, 573.87, 229.19],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [99.17, 573.87, 229.19, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 150.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 150.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [120.00, 573.87, 190.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [120.00, 573.87, 190.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [160.00, 573.87, 180.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [160.00, 573.87, 180.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [180.00, 573.87, 140.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [180.00, 573.87, 140.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [200.00, 573.87, 100.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [200.00, 573.87, 100.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [150.00, 573.87, 120.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [150.00, 573.87, 120.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [180.00, 573.87, 200.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [180.00, 573.87, 200.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [200.00, 573.87, 230.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [200.00, 573.87, 230.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [160.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [160.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 260.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 260.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [120.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [120.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [130.00, 573.87, 200.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [130.00, 573.87, 200.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [170.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [170.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [150.00, 573.87, 210.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [150.00, 573.87, 210.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [170.00, 573.87, 180.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [170.00, 573.87, 180.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+}
+,
+{
+  "trans": [105.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [105.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [120.00, 573.87, 160.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [120.00, 573.87, 160.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [80.00, 573.87, 180.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [80.00, 573.87, 180.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 210.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 210.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [160.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [160.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [120.00, 573.87, 200.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [120.00, 573.87, 200.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 180.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 180.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [110.00, 573.87, 230.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [110.00, 573.87, 230.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [90.00, 573.87, 270.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [90.00, 573.87, 270.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 270.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 270.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [110.00, 573.87, 280.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [110.00, 573.87, 280.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [100.00, 573.87, 220.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [100.00, 573.87, 220.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [130.00, 573.87, 190.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [130.00, 573.87, 190.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+}
+,
 
-    {
-      "trans": [-5.4630, 17.4553, 1.6169], // translation
-      "etype": "eco-yellow",  // actor type
-      "game_task": "(game-task none)", // associated game task (for powercells, etc)
-      "quat": [0, 0, 0, 1], // quaternion
-      "bsphere": [-5.4630, 17.4553, 1.6169, 10], // bounding sphere
-      "lump": {
-        "name": "test-eco"
-      }
-    },
-    {
-      "trans": [-7.3159, 1.0468, 20.3499],
-      "etype": "babak",
+        {
+      "trans": [-215.78, 565.30, -45.30],
+      "etype": "ogreboss",
       "game_task": 0,
       "quat" : [0, 0, 0, 1],
-      "bsphere": [-7.3159, 1.0468, 20.3499, 10],
+      "bsphere": [-215.78, 565.30, -45.30, 10],
       "lump": {
-        "name": "test-babak",
+        "name": "BUU",
         "vis-dist": ["meters", 200.0],
         "cam-notice-dist": ["meters", 30.0],
         "idle-distance": ["meters", 50.0],
         "cam-vert": ["meters", 8.0],
         "cam-horz": ["meters", 20.0],
         "path": ["vector3m", // I am pretty sure game will crash if there is no path for an enemy. So just add one. You can use "path-actor" if you want to use another actor's path.
-            [-7.3159, 1.0468, 20.3499],
-            [-2.3607, 1.0468, 12.8255],
-            [-9.7266, 1.0468, 14.4445],
-            [-7.3159, 1.0468, 20.3499]
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19],
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19]
           ],
         "nav-mesh-sphere": ["vector4m", // You can define spheres that will be added to the navmesh of the enemy. Enemies of the navmesh will avoid these spheres - like they avoid each other.
           [-5.3159, 1.0468, 16.3499, 1.0]
@@ -159,135 +1291,2122 @@
       }
     },
     {
-      "trans": [-5.41, 3.5, 28.42], // translation
-      "etype": "test-actor",  // actor type
-      "game_task": 0, // associated game task (for powercells, etc)
+  "trans": [89.00, 573.87, 155.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [89.00, 573.87, 155.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [125.00, 573.87, 185.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [125.00, 573.87, 185.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [100.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [100.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [80.00, 573.87, 200.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [80.00, 573.87, 200.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [120.00, 573.87, 240.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [120.00, 573.87, 240.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [70.00, 573.87, 280.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [70.00, 573.87, 280.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [110.00, 573.87, 220.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [110.00, 573.87, 220.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [150.00, 573.87, 190.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [150.00, 573.87, 190.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [80.00, 573.87, 260.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [80.00, 573.87, 260.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [110.00, 573.87, 280.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [110.00, 573.87, 280.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 270.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 270.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+}
+,
+{
+  "trans": [60.00, 573.87, 150.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [60.00, 573.87, 150.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [130.00, 573.87, 180.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [130.00, 573.87, 180.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [70.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [70.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [110.00, 573.87, 240.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [110.00, 573.87, 240.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [120.00, 573.87, 260.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [120.00, 573.87, 260.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [90.00, 573.87, 300.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [90.00, 573.87, 300.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [50.00, 573.87, 280.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [50.00, 573.87, 280.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [110.00, 573.87, 210.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [110.00, 573.87, 210.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [160.00, 573.87, 250.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [160.00, 573.87, 250.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [140.00, 573.87, 180.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [140.00, 573.87, 180.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [80.00, 573.87, 230.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [80.00, 573.87, 230.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [150.00, 573.87, 280.00],
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [150.00, 573.87, 280.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 9200.0],
+    "cam-notice-dist": ["meters", 930.0],
+    "idle-distance": ["meters", 950.0],
+    "cam-vert": ["meters", 98.0],
+    "cam-horz": ["meters", 920.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-121.06, 565.87, 20.85], 
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-121.06, 565.87, 20.85, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-100.00, 565.87, 30.00], 
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-100.00, 565.87, 30.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-80.00, 565.87, 40.00], 
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.00, 565.87, 40.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-60.00, 565.87, 50.00], 
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-60.00, 565.87, 50.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-40.00, 565.87, 60.00], 
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-40.00, 565.87, 60.00, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+}
+,
+{
+  "trans": [-268.60, 652.00, -132.88],  
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-268.60, 652.00, -132.88, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-248.60, 652.00, -122.88],  
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-248.60, 652.00, -122.88, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-228.60, 652.00, -112.88],  
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-228.60, 652.00, -112.88, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-208.60, 652.00, -102.88],  
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-208.60, 652.00, -102.88, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+},
+{
+  "trans": [-188.60, 652.00, -92.88],  
+  "etype": "babak",
+  "game_task": 0,
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-188.60, 652.00, -92.88, 10],
+  "lump": {
+    "name": "test-babak",
+    "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+    "eco-info": ["eco-info", "(pickup-type money)", 5],
+    "path": ["vector3m",
+      [82.60, 573.87, 141.28],
+      [172.52, 573.87, 222.00],
+      [92.71, 573.87, 311.57],
+      [4.26, 573.87, 233.14]
+    ],
+    "nav-mesh-sphere": ["vector4m",
+      [82.60, 573.87, 141.28, 1.0],
+      [172.52, 573.87, 222.00, 1.0],
+      [92.71, 573.87, 311.57, 1.0],
+      [4.26, 573.87, 233.14, 1.0]
+    ]
+  }
+}
+,
+
+
+            {
+      "trans": [-130.13, 576.33, -212.06],
+      "etype": "eichar",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-130.13, 576.33, -212.06, 10],
+      "lump": {
+        "name": "eichar",
+        "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "cam-vert": ["meters", 8.0],
+        "cam-horz": ["meters", 20.0],
+        "path": ["vector3m", // I am pretty sure game will crash if there is no path for an enemy. So just add one. You can use "path-actor" if you want to use another actor's path.
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19],
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19]
+          ],
+        "nav-mesh-sphere": ["vector4m", // You can define spheres that will be added to the navmesh of the enemy. Enemies of the navmesh will avoid these spheres - like they avoid each other.
+          [-5.3159, 1.0468, 16.3499, 1.0]
+          ]
+      }
+    },
+
+
+
+    {
+      "trans": [-65.54, 565.30, 63.81], // translation
+      "etype": "eco-yellow",  // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
       "quat": [0, 0, 0, 1], // quaternion
-      "bsphere": [-7.41, 3.5, 28.42, 10], // bounding sphere
+      "bsphere": [-65.54, 569.30, 63.81, 10], // bounding sphere
       "lump": {
-        "name": "test-actor"
+        "name": "test-eco"
+      }
+    },
+        {
+      "trans": [104.97, 575.87, 294.12], // translation
+      "etype": "eco-red",  // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [0, 0, 0, 1], // quaternion
+      "bsphere": [104.97, 575.87, 294.12, 10], // bounding sphere
+      "lump": {
+        "name": "eco-red"
+      }
+    },
+
+            {
+      "trans": [114.43, 575.87, 284.89], // translation
+      "etype": "eco-blue",  // actor type
+      "game_task": "(game-task none)", // associated game task (for powercells, etc)
+      "quat": [0, 0, 0, 1], // quaternion
+      "bsphere": [114.43, 575.87, 284.89, 10], // bounding sphere
+      "lump": {
+        "name": "eco-blue"
+      }
+    },
+
+        {
+      "trans": [-213.60, 574.78, 24.04],
+      "etype": "ropebridge",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-213.60, 574.78, 24.04, 10],
+      "lump": {
+        "name": "ropebridge",
+        "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "path": ["vector3m", // I am pretty sure game will crash if there is no path for an enemy. So just add one. You can use "path-actor" if you want to use another actor's path.
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19],
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19]
+          ],
+        "nav-mesh-sphere": ["vector4m", // You can define spheres that will be added to the navmesh of the enemy. Enemies of the navmesh will avoid these spheres - like they avoid each other.
+          [-5.3159, 1.0468, 16.3499, 1.0]
+          ]
+      }
+    },
+
+            {
+      "trans": [-213.60, 584.78, 24.04],
+      "etype": "ropebridge",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-213.60, 584.78, 24.04, 10],
+      "lump": {
+        "name": "ropebridge",
+        "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "path": ["vector3m", // I am pretty sure game will crash if there is no path for an enemy. So just add one. You can use "path-actor" if you want to use another actor's path.
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19],
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19]
+          ],
+        "nav-mesh-sphere": ["vector4m", // You can define spheres that will be added to the navmesh of the enemy. Enemies of the navmesh will avoid these spheres - like they avoid each other.
+          [-5.3159, 1.0468, 16.3499, 1.0]
+          ]
+      }
+    },
+            {
+      "trans": [-213.60, 594.78, 24.04],
+      "etype": "ropebridge",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-213.60, 594.78, 24.04, 10],
+      "lump": {
+        "name": "ropebridge",
+        "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "path": ["vector3m", // I am pretty sure game will crash if there is no path for an enemy. So just add one. You can use "path-actor" if you want to use another actor's path.
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19],
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19]
+          ],
+        "nav-mesh-sphere": ["vector4m", // You can define spheres that will be added to the navmesh of the enemy. Enemies of the navmesh will avoid these spheres - like they avoid each other.
+          [-5.3159, 1.0468, 16.3499, 1.0]
+          ]
+      }
+    },
+    {
+      "trans": [-213.60, 614.78, 24.04],
+      "etype": "ropebridge",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-213.60, 614.78, 24.04, 10],
+      "lump": {
+        "name": "ropebridge",
+        "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "path": ["vector3m", // I am pretty sure game will crash if there is no path for an enemy. So just add one. You can use "path-actor" if you want to use another actor's path.
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19],
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19]
+          ],
+        "nav-mesh-sphere": ["vector4m", // You can define spheres that will be added to the navmesh of the enemy. Enemies of the navmesh will avoid these spheres - like they avoid each other.
+          [-5.3159, 1.0468, 16.3499, 1.0]
+          ]
+      }
+    },
+        {
+      "trans": [-213.60, 624.78, 24.04],
+      "etype": "ropebridge",
+      "game_task": 0,
+      "quat" : [0, 0, 0, 1],
+      "bsphere": [-213.60, 624.78, 24.04, 10],
+      "lump": {
+        "name": "ropebridge",
+        "vis-dist": ["meters", 200.0],
+        "cam-notice-dist": ["meters", 30.0],
+        "idle-distance": ["meters", 50.0],
+        "path": ["vector3m", // I am pretty sure game will crash if there is no path for an enemy. So just add one. You can use "path-actor" if you want to use another actor's path.
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19],
+            [92.17, 573.87, 229.19],
+            [122.17, 873.87, 429.19]
+          ],
+        "nav-mesh-sphere": ["vector4m", // You can define spheres that will be added to the navmesh of the enemy. Enemies of the navmesh will avoid these spheres - like they avoid each other.
+          [-5.3159, 1.0468, 16.3499, 1.0]
+          ]
       }
     },
 
     {
-      "trans": [0.0, 50.0, 10.0],
-      "etype": "linear-plat",
-      "game_task": 0,
+  "trans": [-213.60, 626.78, 24.04],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-213.60, 626.78, 24.04, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+}
+,
+    {
+  "trans": [-213.60, 628.78, 24.04],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-213.60, 628.78, 24.04, 10],
+  "lump": {
+    "name": "test-steel",
+    "crate-type": "'steel",
+    "eco-info": ["eco-info", "(pickup-type money)", 50]
+  }
+},
+{
+    
+      "trans": [-114.81, 565.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
       "quat": [0, 0, 0, 1],
-      "bsphere": [0.0, 50.0, 10.0, 10],
+      "bsphere": [-114.81, 565.31, -32.34, 10],
       "lump": {
-        "name": "linear-plat-0",
-        "path": ["vector4m",
-          [0.0, 50.0, 10.0, 1.0],
-          [0.0, 50.0, 10.0, 1.0],
-          [0.0, 60.0, 10.0, 1.0],
-          [0.0, 50.0, 10.0, 1.0],
-          [0.0, 50.0, 10.0, 1.0],
-          [0.0, 60.0, 10.0, 1.0],
-          [0.0, 50.0, 10.0, 1.0]
-          ],
-        "timings": ["float",
-          0.0, // offset before starting
-          2.0, // down to up (out)
-          2.0, // up to down (out)
-          6.0, // stay down
-          2.0, // down to up (back)
-          2.0, // up to down (back)
-          0.0 // immediately start back up
-          ],
-        "sync": ["float", 14, 0.0]
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
       }
     },
-
     {
-      "trans": [0.0, 50.0, 17.0],
-      "etype": "linear-plat",
-      "game_task": 0,
+      "trans": [-114.81, 567.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
       "quat": [0, 0, 0, 1],
-      "bsphere": [0.0, 50.0, 17.0, 10],
+      "bsphere": [-114.81, 567.31, -32.34, 10],
       "lump": {
-        "name": "linear-plat-1",
-        "path": ["vector4m",
-          [0.0, 50.0, 17.0, 1.0],
-          [0.0, 50.0, 17.0, 1.0],
-          [0.0, 60.0, 17.0, 1.0],
-          [0.0, 50.0, 17.0, 1.0],
-          [0.0, 50.0, 17.0, 1.0],
-          [0.0, 60.0, 17.0, 1.0],
-          [0.0, 50.0, 17.0, 1.0]
-        ],
-        "timings": ["float",
-          1.0, // offset before starting
-          2.0, // down to up (out)
-          2.0, // up to down (out)
-          4.0, // stay down
-          2.0, // down to up (back)
-          2.0, // up to down (back)
-          1.0 // immediately start back up
-          ],
-        "sync": ["float", 14, 0.0]
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
       }
     },
-
     {
-      "trans": [0.0, 50.0, 24.0],
-      "etype": "linear-plat",
-      "game_task": 0,
+      "trans": [-114.81, 569.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
       "quat": [0, 0, 0, 1],
-      "bsphere": [0.0, 50.0, 24.0, 10],
+      "bsphere": [-114.81, 569.31, -32.34, 10],
       "lump": {
-        "name": "linear-plat-2",
-        "path": ["vector4m",
-          [0.0, 50.0, 24.0, 1.0],
-          [0.0, 50.0, 24.0, 1.0],
-          [0.0, 60.0, 24.0, 1.0],
-          [0.0, 50.0, 24.0, 1.0],
-          [0.0, 50.0, 24.0, 1.0],
-          [0.0, 60.0, 24.0, 1.0],
-          [0.0, 50.0, 24.0, 1.0]
-          ],
-        "timings": ["float",
-          2.0, // offset before starting
-          2.0, // down to up (out)
-          2.0, // up to down (out)
-          2.0, // stay down
-          2.0, // down to up (back)
-          2.0, // up to down (back)
-          2.0 // immediately start back up
-          ],
-        "sync": ["float", 14, 0.0]
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
       }
     },
-
     {
-      "trans": [0.0, 50.0, 31.0],
-      "etype": "linear-plat",
-      "game_task": 0,
+      "trans": [-114.81, 571.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
       "quat": [0, 0, 0, 1],
-      "bsphere": [0.0, 50.0, 31.0, 10],
+      "bsphere": [-114.81, 571.31, -32.34, 10],
       "lump": {
-        "name": "linear-plat-3",
-        "path": ["vector4m",
-          [0.0, 50.0, 31.0, 1.0],
-          [0.0, 50.0, 31.0, 1.0],
-          [0.0, 60.0, 31.0, 1.0],
-          [0.0, 50.0, 31.0, 1.0],
-          [0.0, 50.0, 31.0, 1.0],
-          [0.0, 60.0, 31.0, 1.0],
-          [0.0, 50.0, 31.0, 1.0]
-        ],
-        "timings": ["float",
-          3.0, // offset before starting
-          2.0, // down to up (out)
-          2.0, // up to down (out)
-          0.0, // stay down
-          2.0, // down to up (back)
-          2.0, // up to down (back)
-          0.0 // immediately start back up
-          ],
-        "sync": ["float", 14, 0.0]
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
       }
-    }
+    },
+    {
+      "trans": [-114.81, 573.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-114.81, 573.31, -32.34, 10],
+      "lump": {
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
+      }
+    },
+    {
+      "trans": [-114.81, 575.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-114.81, 575.31, -32.34, 10],
+      "lump": {
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
+      }
+    },
+    {
+      "trans": [-114.81, 577.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-114.81, 577.31, -32.34, 10],
+      "lump": {
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
+      }
+    },
+    {
+      "trans": [-114.81, 579.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-114.81, 579.31, -32.34, 10],
+      "lump": {
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
+      }
+    },
+    {
+      "trans": [-114.81, 581.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-114.81, 581.31, -32.34, 10],
+      "lump": {
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
+      }
+    },
+    {
+      "trans": [-114.81, 583.31, -32.34],
+      "etype": "crate",
+      "game_task": "(game-task none)",
+      "quat": [0, 0, 0, 1],
+      "bsphere": [-114.81, 583.31, -32.34, 10],
+      "lump": {
+        "name": "test-darkeco",
+        "crate-type": "'darkeco"
+      }
+    },
+    {
+  "trans": [-150.62, 565.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 565.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 567.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 567.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 569.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 569.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 571.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 571.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 573.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 573.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 575.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 575.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 577.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 577.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 579.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 579.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 581.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 581.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-150.62, 583.31, 29.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-150.62, 583.31, 29.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 565.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 565.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 567.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 567.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 569.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 569.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 571.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 571.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 573.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 573.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 575.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 575.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 577.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 577.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 579.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 579.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 581.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 581.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 583.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 583.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 585.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 585.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 587.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 587.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 589.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 589.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 591.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 591.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 593.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 593.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-211.85, 595.30, 48.38],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-211.85, 595.30, 48.38, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+}
+,
+{
+  "trans": [-80.28, 565.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 565.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 567.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 567.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 569.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 569.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 571.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 571.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 573.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 573.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 575.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 575.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 577.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 577.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 579.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 579.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 581.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 581.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 583.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 583.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 585.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 585.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 587.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 587.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 589.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 589.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 591.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 591.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 593.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 593.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 595.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 595.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 597.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 597.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 599.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 599.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 601.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 601.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 603.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 603.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 605.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 605.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 607.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 607.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 609.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 609.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 611.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 611.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 613.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 613.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 615.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 615.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 617.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 617.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 619.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 619.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 621.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 621.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 623.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 623.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 625.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 625.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 627.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 627.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 629.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 629.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 631.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 631.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 633.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 633.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 635.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 635.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 637.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 637.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 639.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 639.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 641.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 641.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 643.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 643.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 645.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 645.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 647.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 647.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 649.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 649.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 651.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 651.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 653.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 653.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 655.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 655.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 657.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 657.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 659.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 659.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 661.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 661.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+},
+{
+  "trans": [-80.28, 663.31, -82.95],
+  "etype": "crate",
+  "game_task": "(game-task none)",
+  "quat": [0, 0, 0, 1],
+  "bsphere": [-80.28, 663.31, -82.95, 10],
+  "lump": {
+    "name": "test-darkeco",
+    "crate-type": "'darkeco"
+  }
+}
 
+
+
+  
+
+
+
+
+    // {
+    //   "trans": [-7.41, 3.5, 28.42], // translation
+    //   "etype": "plat",  // actor type
+    //   "game_task": "(game-task none)", // associated game task (for powercells, etc)
+    //   "quat": [0, 0, 0, 1], // quaternion
+    //   "bsphere": [-7.41, 3.5, 28.42, 10], // bounding sphere
+    //   "lump": {
+    //     "name": "test-plat"
+    //   }
+    // }
   ]
 }

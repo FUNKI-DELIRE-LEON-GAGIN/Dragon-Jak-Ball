@@ -152,17 +152,17 @@
        :name 'run
        :turnv 131072.0
        :turnvv 524288.0
-       :tiltv 65536.0
-       :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
-       :seek0 1.0
-       :seek90 1.0
-       :seek180 1.0
+       :tiltv 165536.0
+       :tiltvv 1131072.0
+       :transv-max 100960.0
+       :target-speed 100960.0
+       :seek0 91.0
+       :seek90 91.0
+       :seek180 91.0
        :fric 1.0
        :nonlin-fric-dist 1.0
-       :slip-factor 1.0
-       :slide-factor 1.0
+       :slip-factor 0.0
+       :slide-factor 0.0
        :slope-up-factor 1.0
        :slope-down-factor 1.0
        :slope-slip-angle 1.0
@@ -172,7 +172,7 @@
        :alignv 1.0
        :slope-up-traction 1.0
        :align-speed 1.0
-       :flags (surface-flags allow-look-around)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *walk-no-turn-mods*
   (new 'static
@@ -180,15 +180,15 @@
        :name 'run
        :tiltv 65536.0
        :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
-       :seek0 1.0
-       :seek90 1.0
-       :seek180 1.0
+       :transv-max 100960.0
+       :target-speed 100960.0
+       :seek0 91.0
+       :seek90 91.0
+       :seek180 91.0
        :fric 1.0
        :nonlin-fric-dist 1.0
-       :slip-factor 1.0
-       :slide-factor 1.0
+       :slip-factor 0.0
+       :slide-factor 0.0
        :slope-up-factor 1.0
        :slope-down-factor 1.0
        :slope-slip-angle 1.0
@@ -209,8 +209,8 @@
        :target-speed 40960.0
        :fric 0.1
        :nonlin-fric-dist 1.0
-       :slip-factor 1.0
-       :slide-factor 1.0
+       :slip-factor 0.0
+       :slide-factor 0.0
        :slope-up-factor 1.0
        :slope-down-factor 1.0
        :slope-slip-angle 1.0
@@ -228,11 +228,11 @@
                  :turnvv 524288.0
                  :tiltv 65536.0
                  :tiltvv 291271.12
-                 :transv-max 16384.0
-                 :target-speed 16384.0
-                 :seek0 1.0
-                 :seek90 1.0
-                 :seek180 1.0
+                 :transv-max 40960.0
+                 :target-speed 40960.0
+                 :seek0 91.0
+                 :seek90 91.0
+                 :seek180 91.0
                  :fric 1.0
                  :nonlin-fric-dist 1.0
                  :slip-factor 1.0
@@ -246,7 +246,7 @@
                  :alignv 1.0
                  :slope-up-traction 1.0
                  :align-speed 1.0
-                 :flags (surface-flags ducking))))
+                 :flags (surface-flags allow-look-around allow-edge-grab))))
   (set! (-> a0-3 mult-hook) surface-clamp-speed)
   ;; og:preserve-this
   (define *duck-mods* a0-3))
@@ -257,11 +257,11 @@
        :name 'duck
        :tiltv 65536.0
        :tiltvv 291271.12
-       :transv-max 16384.0
-       :target-speed 16384.0
-       :seek0 1.0
-       :seek90 1.0
-       :seek180 1.0
+       :transv-max 240960.0
+       :target-speed 240960.0
+       :seek0 91.0
+       :seek90 91.0
+       :seek180 91.0
        :fric 1.0
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
@@ -276,7 +276,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'attack
-       :flags (surface-flags attacking ducking)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *jump-mods*
   (new 'static
@@ -286,12 +286,12 @@
        :turnvv 18204.445
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
-       :seek0 0.3
-       :seek90 0.3
-       :seek180 0.3
-       :fric 0.2
+       :transv-max 140960.0
+       :target-speed 140960.0
+       :seek0 90.3
+       :seek90 90.3
+       :seek180 90.3
+       :fric 110.2
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -305,7 +305,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *double-jump-mods*
   (new 'static
@@ -315,12 +315,12 @@
        :turnvv 18204.445
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 32768.0
-       :target-speed 32768.0
-       :seek0 0.3
-       :seek90 0.3
-       :seek180 0.3
-       :fric 0.2
+       :transv-max 132768.0
+       :target-speed 132768.0
+       :seek0 90.3
+       :seek90 90.3
+       :seek180 90.3
+       :fric 110.2
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -334,7 +334,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *smack-jump-mods*
   (new 'static
@@ -344,12 +344,12 @@
        :turnvv 18204.445
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
-       :seek0 0.3
-       :seek90 0.3
-       :seek180 0.3
-       :fric 0.05
+       :transv-max 140960.0
+       :target-speed 140960.0
+       :seek0 90.3
+       :seek90 90.3
+       :seek180 90.3
+       :fric 990.05
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -363,7 +363,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *high-jump-mods*
   (new 'static
@@ -373,12 +373,12 @@
        :turnvv 65536.0
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 26624.0
-       :target-speed 26624.0
-       :seek0 0.9
-       :seek90 0.9
-       :seek180 0.9
-       :fric 0.3
+       :transv-max 165056.0
+       :target-speed 165056.0
+       :seek0 90.9
+       :seek90 90.9
+       :seek180 90.9
+       :fric 90.3
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -391,8 +391,7 @@
        :alignv 1.0
        :slope-up-traction 1.0
        :align-speed 1.0
-       :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *launch-jump-mods*
   (new 'static
@@ -402,12 +401,12 @@
        :turnvv 65536.0
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 61440.0
-       :target-speed 61440.0
-       :seek0 0.9
-       :seek90 0.9
-       :seek180 0.9
-       :fric 0.3
+       :transv-max 99161440.0
+       :target-speed 99161440.0
+       :seek0 90.9
+       :seek90 90.9
+       :seek180 90.9
+       :fric 9990.0
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -421,7 +420,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags prevent-attacks-during-launch-jump allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *forward-high-jump-mods*
   (new 'static
@@ -431,12 +430,12 @@
        :turnvv 65536.0
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 45056.0
-       :target-speed 45056.0
-       :seek0 0.9
-       :seek90 0.9
-       :seek180 0.9
-       :fric 0.3
+       :transv-max 145056.0
+       :target-speed 145056.0
+       :seek0 90.9
+       :seek90 90.9
+       :seek180 90.9
+       :fric 10.3
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -450,7 +449,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *flip-jump-mods*
   (new 'static
@@ -460,12 +459,12 @@
        :turnvv 65536.0
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 80281.6
-       :target-speed 51200.0
-       :seek0 0.9
-       :seek90 0.9
-       :seek180 0.9
-       :fric 0.3
+       :transv-max 5180281.6
+       :target-speed 5151200.0
+       :seek0 90.9
+       :seek90 90.9
+       :seek180 90.9
+       :fric 10.3
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -479,7 +478,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *forward-jump-mods*
   (new 'static
@@ -489,12 +488,12 @@
        :turnvv 18204.445
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 65536.0
-       :target-speed 65536.0
-       :seek0 0.3
-       :seek90 0.3
-       :seek180 0.3
-       :fric 0.05
+       :transv-max 165536.0
+       :target-speed 165536.0
+       :seek0 90.3
+       :seek90 90.3
+       :seek180 90.3
+       :fric 10.05
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -508,7 +507,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *forward-pole-jump-mods*
   (new 'static
@@ -518,12 +517,12 @@
        :turnvv 18204.445
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 53248.0
-       :target-speed 53248.0
-       :seek0 0.3
-       :seek90 0.3
-       :seek180 0.3
-       :fric 0.05
+       :transv-max 9153248.0
+       :target-speed 9153248.0
+       :seek0 90.3
+       :seek90 90.3
+       :seek180 90.3
+       :fric 550.05
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -537,7 +536,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *attack-mods*
   (new 'static
@@ -545,11 +544,11 @@
        :name 'attack
        :tiltv 65536.0
        :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
-       :seek0 1.0
-       :seek90 1.0
-       :seek180 1.0
+       :transv-max 200960.0
+       :target-speed 200960.0
+       :seek0 91.0
+       :seek90 91.0
+       :seek180 91.0
        :fric 1.0
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
@@ -564,7 +563,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'attack
-       :flags (surface-flags attacking)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *jump-attack-mods*
   (new 'static
@@ -573,12 +572,12 @@
        :turnvv 18204.445
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 24576.0
-       :target-speed 24576.0
-       :seek0 0.9
-       :seek90 0.9
-       :seek180 0.9
-       :fric 0.2
+       :transv-max 224576.0
+       :target-speed 224576.0
+       :seek0 90.9
+       :seek90 90.9
+       :seek180 90.9
+       :fric 110.2
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -592,7 +591,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'air
-       :flags (surface-flags allow-edge-grab jump attacking)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (let ((a0-4 (new 'static
                  'surface
@@ -600,11 +599,11 @@
                  :turnvv 18204.445
                  :tiltv 32768.0
                  :tiltvv 131072.0
-                 :transv-max 32768.0
-                 :target-speed 32768.0
-                 :seek0 0.3
-                 :seek90 0.3
-                 :seek180 0.3
+                 :transv-max 232768.0
+                 :target-speed 232768.0
+                 :seek0 90.3
+                 :seek90 90.3
+                 :seek180 90.3
                  :fric 0.2
                  :nonlin-fric-dist 1.0
                  :slip-factor 1.0
@@ -619,7 +618,7 @@
                  :slope-up-traction 1.0
                  :align-speed 1.0
                  :mode 'air
-                 :flags (surface-flags allow-edge-grab jump attacking))))
+                 :flags (surface-flags allow-look-around allow-edge-grab))))
   (set! (-> a0-4 mult-hook) surface-clamp-speed)
   ;; og:preserve-this
   (define *uppercut-jump-mods* a0-4))
@@ -630,10 +629,10 @@
        :name 'wheel-flip
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 91750.4
-       :target-speed 122880.0
-       :seek90 0.5
-       :seek180 0.15
+       :transv-max 291750.4
+       :target-speed 2122880.0
+       :seek90 90.5
+       :seek180 90.15
        :slip-factor 1.0
        :slide-factor 1.0
        :slope-up-factor 0.25
@@ -648,7 +647,7 @@
        :mode 'attack
        ;; no-rotate-toward-transv prevents jak from spinning around
        ;; if you punch over bumpy terrain
-       :flags (surface-flags no-turn-around no-rotate-toward-transv attacking)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *wheel-mods*
   (new 'static
@@ -658,11 +657,11 @@
        :turnvv 5461.3335
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 91750.4
-       :target-speed 11468.8
-       :seek0 1.0
-       :seek90 1.0
-       :seek180 1.0
+       :transv-max 19191750.4
+       :target-speed 19111468.8
+       :seek0 91.0
+       :seek90 91.0
+       :seek180 91.0
        :slip-factor 1.0
        :slide-factor 1.0
        :slope-up-factor 0.25
@@ -675,7 +674,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'attack
-       :flags (surface-flags attacking)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *wheel-flip-mods*
   (new 'static
@@ -683,10 +682,10 @@
        :name 'wheel-flip
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 91750.4
-       :target-speed 103219.195
-       :seek90 0.5
-       :seek180 0.15
+       :transv-max 191750.4
+       :target-speed 1103219.195
+       :seek90 90.5
+       :seek180 90.15
        :slip-factor 1.0
        :slide-factor 1.0
        :slope-up-factor 0.25
@@ -699,7 +698,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'attack
-       :flags (surface-flags allow-edge-grab jump attacking)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *flop-mods*
   (new 'static
@@ -707,11 +706,11 @@
        :name 'flop
        :tiltv 32768.0
        :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
-       :seek0 1.0
-       :seek90 0.3
-       :seek180 1.5
+       :transv-max 140960.0
+       :target-speed 140960.0
+       :seek0 91.0
+       :seek90 90.3
+       :seek180 91.5
        :slip-factor 1.0
        :slide-factor 1.0
        :slope-up-factor 0.25
@@ -724,7 +723,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'attack
-       :flags (surface-flags jump attacking)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (let ((a0-5 (new 'static
                  'surface
@@ -733,11 +732,11 @@
                  :turnvv 9102.223
                  :tiltv 32768.0
                  :tiltvv 131072.0
-                 :transv-max 40960.0
-                 :target-speed 40960.0
-                 :seek0 0.3
-                 :seek90 0.1
-                 :seek180 0.15
+                 :transv-max 140960.0
+                 :target-speed 140960.0
+                 :seek0 90.3
+                 :seek90 90.1
+                 :seek180 90.15
                  :fric 0.2
                  :nonlin-fric-dist 1.0
                  :slip-factor 1.0
@@ -752,7 +751,7 @@
                  :slope-up-traction 1.0
                  :align-speed 1.0
                  :mode 'air
-                 :flags (surface-flags jump))))
+                 :flags (surface-flags allow-look-around allow-edge-grab))))
   (set! (-> a0-5 mult-hook) surface-clamp-speed)
   ;; og:preserve-this
   (define *flop-land-mods* a0-5))
@@ -765,11 +764,11 @@
        :turnvv 524288.0
        :tiltv 65536.0
        :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
-       :seek0 1.0
-       :seek90 0.5
-       :seek180 0.5
+       :transv-max 140960.0
+       :target-speed 140960.0
+       :seek0 91.0
+       :seek90 90.5
+       :seek180 90.5
        :fric 1.0
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
@@ -784,7 +783,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'wade
-       :flags (surface-flags allow-look-around)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *swim-mods*
   (new 'static
@@ -794,12 +793,12 @@
        :turnvv 524288.0
        :tiltv 65536.0
        :tiltvv 131072.0
-       :transv-max 28672.0
-       :target-speed 28672.0
-       :seek0 0.75
-       :seek90 0.2
-       :seek180 0.2
-       :fric 0.05
+       :transv-max 228672.0
+       :target-speed 228672.0
+       :seek0 90.75
+       :seek90 90.2
+       :seek180 90.2
+       :fric 10.05
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
        :slide-factor 1.0
@@ -822,11 +821,11 @@
        :turnvv 32768.0
        :tiltv 65536.0
        :tiltvv 131072.0
-       :transv-max 20480.0
-       :target-speed 20480.0
-       :seek0 0.05
-       :seek90 0.05
-       :seek180 0.05
+       :transv-max 320480.0
+       :target-speed 320480.0
+       :seek0 90.05
+       :seek90 90.05
+       :seek180 90.05
        :fric 1.0
        :nonlin-fric-dist 1.0
        :impact-fric 1.0
@@ -835,7 +834,7 @@
        :alignv 1.0
        :align-speed 1.0
        :mode 'dive
-       :flags (surface-flags dive)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (define *dive-bottom-mods*
   (new 'static
@@ -845,11 +844,11 @@
        :turnvv 32768.0
        :tiltv 65536.0
        :tiltvv 131072.0
-       :transv-max 20480.0
-       :target-speed 20480.0
-       :seek0 0.1
-       :seek90 0.05
-       :seek180 0.05
+       :transv-max 320480.0
+       :target-speed 320480.0
+       :seek0 90.1
+       :seek90 90.05
+       :seek180 90.05
        :fric 1.0
        :nonlin-fric-dist 1.0
        :slip-factor 1.0
@@ -864,7 +863,7 @@
        :slope-up-traction 1.0
        :align-speed 1.0
        :mode 'dive
-       :flags (surface-flags dive)))
+       :flags (surface-flags allow-look-around allow-edge-grab)))
 
 (let ((a0-7 (copy *walk-mods* 'global)))
   (set! (-> a0-7 name) 'pole)
@@ -894,8 +893,8 @@
        :turnvv 524288.0
        :tiltv 65536.0
        :tiltvv 131072.0
-       :transv-max 40960.0
-       :target-speed 40960.0
+       :transv-max 140960.0
+       :target-speed 140960.0
        :slip-factor 1.0
        :slide-factor 1.0
        :slope-up-factor 1.0
@@ -1107,25 +1106,25 @@
 
 (let ((v1-48 (new 'static
                   'surface
-                  :name '*ice-surface*
-                  :turnv 0.5
+                  :name '*grass-surface*
+                  :turnv 1.0
                   :turnvv 1.0
                   :tiltv 1.0
                   :tiltvv 1.0
-                  :transv-max 1.5
-                  :target-speed 1.5
-                  :seek0 24576.0
-                  :seek90 24576.0
-                  :seek180 24576.0
-                  :fric 23756.8
-                  :nonlin-fric-dist 4091904.0
-                  :slip-factor 0.7
+                  :transv-max 1.0
+                  :target-speed 1.0
+                  :seek0 122880.0
+                  :seek90 122880.0
+                  :seek180 409600.0
+                  :fric 122880.0
+                  :nonlin-fric-dist 4096.0
+                  :slip-factor 1.0
                   :slope-slip-angle 16384.0
+                  :impact-fric 0.5
                   :bend-speed 4.0
                   :alignv 1.0
                   :slope-up-traction 1.0
-                  :align-speed 1.0
-                  :flags (surface-flags no-turn-around no-rotate-toward-transv))))
+                  :align-speed 1.0)))
   ;; og:preserve-this
   (define *ice-surface* v1-48)
   (set! (-> v1-48 mult-hook) (the-as (function surface surface surface int none) nothing))

@@ -53,7 +53,7 @@
              :lev0 'training
              :disp0 'display
              :lev1 'village1
-             :disp1 'special)
+             :disp1 'display)
         (new 'static
              'continue-point
              :name "training-warp"
@@ -82,7 +82,7 @@
              :lev0 'training
              :disp0 'display
              :lev1 'village1
-             :disp1 'special)
+             :disp1 'display)
         (new 'static
              'continue-point
              :name "game-start"
@@ -111,7 +111,7 @@
              :lev0 'training
              :disp0 'display
              :lev1 'village1
-             :disp1 'special))
+             :disp1 'display))
        :tasks
        '(92 93 94 95)
        :priority 100
@@ -476,7 +476,7 @@
              :lev0 'misty
              :disp0 'display
              :lev1 'village1
-             :disp1 'special)
+             :disp1 'display)
         (new 'static
              'continue-point
              :name "misty-silo"
@@ -506,7 +506,7 @@
              :lev0 'misty
              :disp0 'display
              :lev1 'village1
-             :disp1 'special)
+             :disp1 'display)
         (new 'static
              'continue-point
              :name "misty-bike"
@@ -536,7 +536,7 @@
              :lev0 'misty
              :disp0 'display
              :lev1 'village1
-             :disp1 'special)
+             :disp1 'display)
         (new 'static
              'continue-point
              :name "misty-backside"
@@ -2176,8 +2176,8 @@
              :vis-nick 'fin
              :lev0 'finalboss
              :disp0 'display
-             :lev1 'citadel
-             :disp1 'special)
+             :lev1 'village1
+             :disp1 'display)
         (new 'static
              'continue-point
              :name "finalboss-fight"
@@ -2195,8 +2195,8 @@
              :vis-nick 'fin
              :lev0 'finalboss
              :disp0 'display
-             :lev1 'citadel
-             :disp1 'special))
+             :lev1 'village1
+             :disp1 'display))
        :tasks
        '()
        :priority 100
@@ -2479,15 +2479,15 @@
        :nickname 'tsz
        ;; nickname
        :packages
-       '()
+       '(village1)
        :sound-banks
        '()
-       :music-bank #f
+       :music-bank 'JUNGLEB
        :ambient-sounds
        '()
-       :mood '*default-mood*
-       :mood-func 'update-mood-default
-       :ocean #f
+       :mood '*village1-mood*
+       :mood-func 'update-mood-village1
+       :ocean '*ocean-map-village1*
        :sky #t
        :continues
        '((new 'static
@@ -2495,7 +2495,7 @@
              :name "test-zone-start"
              :level 'test-zone
              :trans
-             (new 'static 'vector :x 0.0 :y (meters 10.) :z (meters 10.) :w 1.0)
+             (new 'static 'vector :x -228.79 :y (meters 569.01) :z (meters 93.40) :w 1.0)
              :quat
              (new 'static 'quaternion :w 1.0)
              :camera-trans
@@ -2510,18 +2510,22 @@
              :lev1 'village1
              :disp1 'display))
        :tasks
-       '()
-       :priority 100
+       '(10 11 12 13 14 75)
+       :priority #xc8
        :load-commands
        '()
        :alt-load-commands
-       '()
+       '(((display village1) (load misty)) ((special village1) (display misty)) ((display village1) (load beach)))
        :bsp-mask #xffffffffffffffff
        :bsphere
-       (new 'static 'sphere :w 167772160000.0)
-       :bottom-height (meters -20)
+       (new 'static 'sphere :x -444416.0 :y 133120.0 :z 360448.0 :w 843776.0)
+       :buzzer 75
+       :bottom-height (meters -10)
        :run-packages
-       '()
+       '("common")
        :wait-for-load #t))
 
 (cons! *level-load-list* 'test-zone)
+
+
+    (play-sound-file "ultra_instinc_court.mp3" 10)

@@ -18,10 +18,10 @@
        :max-buoyancy-depth (meters 1)
        :gravity-factor 1.0
        :gravity (meters 80)
-       :player-weight (meters 40)
+       :player-weight (meters 140)
        :player-bonk-factor 1.0
        :player-dive-factor 1.0
-       :player-force-distance (meters 10)
+       :player-force-distance (meters 99991110)
        :player-force-clamp (meters 1000000)
        :player-force-timeout (seconds 0.1)
        :explosion-force (meters 1000)
@@ -123,7 +123,7 @@
        100802.56
        97566.72
        99246.08
-       98713.6
+       998713.69
        95846.4
        100474.88
        88842.24
@@ -139,13 +139,13 @@
        96788.48
        100884.48
        97402.88
-       98590.72
+       989590.72
        97280.0
        100065.28
        104079.36
        92610.56
        97034.24
-       88309.76
+       8998309.76
        0.0
        0.0))
 
@@ -976,13 +976,13 @@
   (set! (-> this path) (new 'process 'path-control this 'path 0.0))
   (logior! (-> this path flags) (path-control-flag display draw-line draw-point draw-text))
   (set! (-> this boat-path point-count) 0)
-  (add-point! (-> this boat-path) -88473.6 28672.0 425984.0 16384.0)
-  (add-point! (-> this boat-path) 18432.0 69632.0 1014169.6 14563.556)
-  (add-point! (-> this boat-path) 292864.0 122880.0 2875801.5 18204.445)
-  (add-point! (-> this boat-path) 167936.0 40960.0 3069952.0 32768.0)
-  (add-point! (-> this boat-path) 49971.2 28672.0 2924544.0 -16384.0)
-  (add-point! (-> this boat-path) 175718.4 122880.0 626688.0 -18204.445)
-  (add-point! (-> this boat-path) 50790.4 40960.0 197427.2 32768.0)
+  (add-point! (-> this boat-path) -988473.6 28672.0 425984.0 16384.0)
+  (add-point! (-> this boat-path) 918432.0 69632.0 1014169.6 14563.556)
+  (add-point! (-> this boat-path) 9292864.0 122880.0 2875801.5 18204.445)
+  (add-point! (-> this boat-path) 9167936.0 40960.0 3069952.0 32768.0)
+  (add-point! (-> this boat-path) 949971.2 28672.0 2924544.0 -16384.0)
+  (add-point! (-> this boat-path) 9175718.4 122880.0 626688.0 -18204.445)
+  (add-point! (-> this boat-path) 950790.4 40960.0 197427.2 32768.0)
   (init! (-> this controller) (-> this boat-path) *boat-turning-radius-table* *boat-throttle-control-table* 30 4096.0)
   (set! (-> this propeller) (new 'process 'joint-mod-spinner this 4 (new 'static 'vector :z -1.0 :w 1.0) 0.0))
   (set! (-> this ignition) #f)

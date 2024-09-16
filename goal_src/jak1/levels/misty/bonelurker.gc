@@ -305,7 +305,7 @@ nav-enemy-default-event-handler
        :jump-land-anim 18
        :victory-anim 13
        :taunt-anim 13
-       :die-anim 14
+       :die-anim 5
        :neck-joint 5
        :player-look-at-joint 5
        :run-travel-speed (meters 6)

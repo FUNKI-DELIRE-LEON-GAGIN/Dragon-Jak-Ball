@@ -58,8 +58,8 @@
        'yakow-bank
        :walk-cycle-frame-count 16.0
        :run-cycle-frame-count 16.0
-       :walk-speed (meters 2.13)
-       :run-speed (meters 6)
+       :walk-speed (meters 22.13)
+       :run-speed (meters 26)
        :walk-anim-speed 1.0
        :run-anim-speed 2.0
        :walk-away-dist (meters 10)
@@ -68,19 +68,19 @@
        :run-rotate-speed 131072.0
        :walk-turn-time (seconds 0.5)
        :run-turn-time (seconds 0.2)
-       :max-walk-speed 16384.0
-       :min-run-speed 15155.2
+       :max-walk-speed 216384.0
+       :min-run-speed 215155.2
        :walk-run-blend-rate 6.0
        :walk-turn-blend-rate 4.0
-       :max-run-speed 61440.0
+       :max-run-speed 261440.0
        :acceleration (meters 3)
        :default-patrol-time (seconds 1)
        :default-idle-distance (meters 10)
        :safe-distance (meters 20)
-       :min-run-anim-speed 0.5
-       :max-run-anim-speed 1.5
-       :min-walk-anim-speed 0.5
-       :speed-boost-impulse (meters 4)))
+       :min-run-anim-speed 1.5
+       :max-run-anim-speed 2.5
+       :min-walk-anim-speed 1.5
+       :speed-boost-impulse (meters 28)))
 
 (deftype yakow (process-drawable)
   ((root               collide-shape-moving :override)

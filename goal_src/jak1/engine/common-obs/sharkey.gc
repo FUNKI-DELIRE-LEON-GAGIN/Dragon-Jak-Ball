@@ -342,7 +342,7 @@ nav-enemy-default-event-handler
     (behavior ()
       (set-time! (-> self player-water-time))
       (ja-channel-push! 1 (seconds 0.17))
-      (sound-play "bigshark-idle")
+      (play-sound-file "shark_requin.mp3" 30)
       (loop
         (ja-no-eval :group!
                     (-> self draw art-group data (-> self nav-info run-anim))

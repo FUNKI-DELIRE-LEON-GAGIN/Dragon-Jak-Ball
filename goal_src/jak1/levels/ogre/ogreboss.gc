@@ -168,7 +168,7 @@
 
 (defun ogreboss-rock-explosion-effect ((arg0 basic))
   (with-pp
-    (sound-play "ogre-explode" :position (the-as symbol arg0))
+    (play-sound-file "buu_recharge.mp3" 10)
     (process-spawn part-tracker :init part-tracker-init (-> *part-group-id-table* 471) -1 #f #f #f arg0 :to *entity-pool*)
     (activate! *camera-smush-control* (the-as float 819.2) 37 600 (the-as float 1.0) (the-as float 0.995))
     (let ((gp-2 (manipy-spawn arg0 (-> pp entity) *ogreboss-shoot-boulder-break-sg* #f :to pp)))
@@ -398,7 +398,7 @@
   :post transform-post)
 
 (defbehavior ogreboss-super-boulder-impact-effect ogreboss-super-boulder ()
-  (sound-play "ogre-boulder" :position (the-as symbol (-> self draw origin)))
+  (play-sound-file "buu_pas_conten.mp3" 50)
   (activate! *camera-smush-control* (the-as float 819.2) 37 600 (the-as float 1.0) (the-as float 0.995))
   (process-spawn part-tracker
                  :init
@@ -896,7 +896,7 @@
            (set! (-> gp-0 blast-radius) (-> self target-blast-radius-array v1-10))))
         (else (vector+*! s5-0 (-> self root trans) *z-vector* (the-as float 409600.0))))
       (set! (-> gp-0 dest) s5-0))
-    (sound-play "ogre-fires" :position (the-as symbol (-> self root trans)))
+    (play-sound-file "buu_caboom.mp3" 50)
     (process-spawn part-tracker
                    :init
                    part-tracker-init
@@ -1076,7 +1076,7 @@
   :post ogreboss-post)
 
 (defbehavior ogreboss-roll-boulder ogreboss ()
-  (sound-play "ogre-fires" :position (the-as symbol (-> self root trans)))
+  (play-sound-file "buu_die.mp3" 50)
   (+! (-> self roll-boulder) (rand-vu-int-range 1 2))
   (if (>= (-> self roll-boulder) 3) (+! (-> self roll-boulder) -3))
   (let ((v1-7 (-> self roll-boulder)))

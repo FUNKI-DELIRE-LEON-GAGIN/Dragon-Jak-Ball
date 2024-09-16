@@ -142,14 +142,14 @@
 (define *pontoonfive-constants*
   (new 'static
        'rigid-body-platform-constants
-       :drag-factor 4.0
-       :buoyancy-factor 3.0
-       :max-buoyancy-depth (meters 3)
+       :drag-factor 14.0
+       :buoyancy-factor 123.0
+       :max-buoyancy-depth (meters 113)
        :gravity-factor 1.0
        :gravity (meters 80)
        :player-weight (meters 35)
-       :player-bonk-factor 1.0
-       :player-dive-factor 1.0
+       :player-bonk-factor 11.0
+       :player-dive-factor 11.0
        :player-force-distance (meters 1000)
        :player-force-clamp (meters 1000000)
        :player-force-timeout (seconds 0.1)
@@ -161,33 +161,33 @@
        :inertial-tensor-x (meters 2.5)
        :inertial-tensor-y (meters 2)
        :inertial-tensor-z (meters 3.2)
-       :idle-distance (meters 90)
+       :idle-distance (meters 50)
        :platform #t
        :sound-name "pontoonten"))
 
 (define *pontoonten-constants*
   (new 'static
        'rigid-body-platform-constants
-       :drag-factor 4.0
-       :buoyancy-factor 3.0
-       :max-buoyancy-depth (meters 3)
+       :drag-factor 14.0
+       :buoyancy-factor 123.0
+       :max-buoyancy-depth (meters 113)
        :gravity-factor 1.0
        :gravity (meters 80)
        :player-weight (meters 35)
-       :player-bonk-factor 1.0
-       :player-dive-factor 1.0
+       :player-bonk-factor 11.0
+       :player-dive-factor 11.0
        :player-force-distance (meters 1000)
        :player-force-clamp (meters 1000000)
        :player-force-timeout (seconds 0.1)
        :explosion-force (meters 1000)
        :linear-damping 0.98
-       :angular-damping 0.95
+       :angular-damping 0.98
        :control-point-count 4
-       :mass 4.0
-       :inertial-tensor-x (meters 5)
+       :mass 2.0
+       :inertial-tensor-x (meters 2.5)
        :inertial-tensor-y (meters 2)
        :inertial-tensor-z (meters 3.2)
-       :idle-distance (meters 90)
+       :idle-distance (meters 50)
        :platform #t
        :sound-name "pontoonten"))
 
@@ -1144,3 +1144,5 @@
     (set! (-> v1-2 far-fade-dist) 245760.0)
     (set! (-> v1-2 waveform) ripple-for-villageb-water))
   (none))
+
+(play-sound-file "v2_mon_entrainement_terminer.mp3" 70)

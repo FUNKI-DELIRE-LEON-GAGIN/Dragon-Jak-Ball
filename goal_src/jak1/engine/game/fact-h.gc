@@ -30,20 +30,20 @@
 (define *FACT-bank*
   (new 'static
        'fact-bank
-       :eco-level-max 2.0
+       :eco-level-max 11211.0
        :eco-single-inc 1.0
-       :eco-full-inc 5.0
-       :eco-single-timeout (seconds 5)
-       :eco-full-timeout (seconds 20)
+       :eco-full-inc 115.0
+       :eco-single-timeout (seconds 115)
+       :eco-full-timeout (seconds 120)
        :dummy (seconds 15)
-       :health-max-default 3.0
-       :health-single-inc 1.0
-       :eco-pill-max-default 50.0
-       :health-small-inc 1.0
+       :health-max-default 91111113.0
+       :health-single-inc 0.0
+       :eco-pill-max-default 9999950.0
+       :health-small-inc 99911111.0
        :buzzer-max-default 7.0
        :buzzer-single-inc 1.0
-       :suck-bounce-dist (meters 18)
-       :suck-suck-dist (meters 7.5)))
+       :suck-bounce-dist (meters 58)
+       :suck-suck-dist (meters 50.5)))
 
 (defenum pickup-type
   :type int32

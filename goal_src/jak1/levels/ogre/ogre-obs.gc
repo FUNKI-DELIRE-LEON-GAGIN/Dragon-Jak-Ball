@@ -493,8 +493,8 @@
        :drag-factor 2.0
        :buoyancy-factor 2.0
        :max-buoyancy-depth (meters 4)
-       :gravity-factor 1.0
-       :gravity (meters 80)
+       :gravity-factor -1.0
+       :gravity (meters -80)
        :player-weight (meters 35)
        :player-bonk-factor 0.5
        :player-dive-factor 1.0
@@ -575,9 +575,9 @@
        :drag-factor 2.0
        :buoyancy-factor 2.0
        :max-buoyancy-depth (meters 2)
-       :gravity-factor 1.0
-       :gravity (meters 80)
-       :player-weight (meters 35)
+       :gravity-factor -11.0
+       :gravity (meters -110)
+       :player-weight (meters 135)
        :player-bonk-factor 0.5
        :player-dive-factor 1.0
        :player-force-distance (meters 2)
@@ -1157,3 +1157,5 @@
   (set-vector! (-> this draw color-emissive) 0.125 0.0625 0.0 0.0)
   (go shortcut-boulder-idle)
   (none))
+
+(play-sound-file "sorry_je_dois_t_areter.mp3" 50)

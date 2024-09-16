@@ -599,7 +599,7 @@
              (go target-jump (-> *TARGET-bank* jump-height-min) (-> *TARGET-bank* jump-height-max) (the-as surface #f)))))
        #f)
       ((= arg2 'jump)
-       (sound-play "jump-long")
+       (play-sound-file "tapunch.mp3" 40)
        (go target-jump (the-as float (-> arg3 param 0)) (the-as float (-> arg3 param 1)) (the-as surface (-> arg3 param 2)))))))
 
 (defbehavior target-jump-event-handler target ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))

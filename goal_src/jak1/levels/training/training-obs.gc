@@ -172,14 +172,14 @@
 (define *tra-pontoon-constants*
   (new 'static
        'rigid-body-platform-constants
-       :drag-factor 4.0
-       :buoyancy-factor 3.0
-       :max-buoyancy-depth (meters 3)
+       :drag-factor 14.0
+       :buoyancy-factor 123.0
+       :max-buoyancy-depth (meters 113)
        :gravity-factor 1.0
        :gravity (meters 80)
        :player-weight (meters 35)
-       :player-bonk-factor 1.0
-       :player-dive-factor 1.0
+       :player-bonk-factor 11.0
+       :player-dive-factor 11.0
        :player-force-distance (meters 1000)
        :player-force-clamp (meters 1000000)
        :player-force-timeout (seconds 0.1)
@@ -748,3 +748,5 @@
   (initialize-skeleton this *scarecrow-b-sg* '())
   (go (method-of-object this idle))
   (none))
+
+(play-sound-file "entrainement.mp3" 70)

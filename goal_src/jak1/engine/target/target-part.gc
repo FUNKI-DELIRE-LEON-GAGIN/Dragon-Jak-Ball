@@ -1970,7 +1970,7 @@
   :init-specs ((:fade-a -0.28444445)))
 
 (defbehavior process-drawable-burn-effect target ((arg0 time-frame))
-  (sound-play "get-burned")
+  (play-sound-file "tapunch.mp3" 40)
   (let ((s5-1 (new 'stack 'rgbaf))
         (s3-0 (current-time))
         (s4-1 (-> self parent)))

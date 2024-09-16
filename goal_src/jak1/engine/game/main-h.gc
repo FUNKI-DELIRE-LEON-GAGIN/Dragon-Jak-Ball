@@ -128,8 +128,6 @@
 
 (define *display-nav-marks* #f)
 
-(define *display-nav-marks-extras* #f)
-
 (define *display-path-marks* #f)
 
 (define *display-vol-marks* #f)

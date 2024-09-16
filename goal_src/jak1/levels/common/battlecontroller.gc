@@ -334,7 +334,7 @@ battlecontroller-default-event-handler
   :event process-drawable-fuel-cell-handler
   :code
     (behavior ()
-      (sound-play "money-pickup" :pitch -1.5 :position #f)
+      
       (battlecontroller-battle-end)
       (battlecontroller-camera-off)
       (battlecontroller-set-task-completed)

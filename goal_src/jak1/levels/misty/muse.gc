@@ -162,13 +162,13 @@ nav-enemy-default-event-handler
   :trans
     (behavior ()
       (cond
-        ((or (not *target*) (< 102400.0 (vector-vector-distance (-> self collide-info trans) (-> *target* control trans))))
+        ((or (not *target*) (< 4102400.0 (vector-vector-distance (-> self collide-info trans) (-> *target* control trans))))
          (set! (-> self target-speed) 0.0)
          (if (= (-> self momentum-speed) 0.0) (go muse-idle)))
         ((or (not *target*)
              (< (-> self sprint-distance) (vector-vector-distance (-> self collide-info trans) (-> *target* control trans))))
-         (set! (-> self target-speed) 40960.0))
-        (else (set! (-> self target-speed) 61440.0)))
+         (set! (-> self target-speed) 440960.0))
+        (else (set! (-> self target-speed) 461440.0)))
       (seek! (-> self sprint-distance) 0.0 (* 4096.0 (seconds-per-frame)))
       (muse-check-dest-point))
   :code
@@ -294,57 +294,58 @@ nav-enemy-default-event-handler
 
 (define *muse-nav-enemy-info*
   (new 'static
-       'nav-enemy-info
-       :idle-anim 3
-       :walk-anim 4
-       :turn-anim -1
-       :notice-anim 3
-       :run-anim 4
-       :jump-anim 7
-       :jump-land-anim 8
-       :victory-anim 3
-       :taunt-anim 3
-       :die-anim 3
-       :neck-joint 6
-       :player-look-at-joint 5
-       :run-travel-speed (meters 10)
-       :run-rotate-speed (degrees 999.99994)
-       :run-acceleration (meters 5)
-       :run-turn-time (seconds 0.15)
-       :walk-travel-speed (meters 10)
-       :walk-rotate-speed (degrees 999.99994)
-       :walk-acceleration (meters 1)
-       :walk-turn-time (seconds 0.15)
-       :attack-shove-back (meters 3)
-       :attack-shove-up (meters 2)
-       :shadow-size (meters 2)
-       :notice-nav-radius (meters 1)
-       :nav-nearest-y-threshold (meters 10)
-       :notice-distance (meters 30)
-       :stop-chase-distance (meters 40)
-       :frustration-distance (meters 8)
-       :frustration-time (seconds 4)
-       :die-anim-hold-frame 10000000000.0
-       :jump-anim-start-frame 6.5
-       :jump-land-anim-end-frame 10000000000.0
-       :jump-height-min (meters 1)
-       :jump-height-factor 0.5
-       :jump-start-anim-speed 1.0
-       :shadow-max-y (meters 1)
-       :shadow-min-y (meters -1)
-       :shadow-locus-dist (meters 150)
-       :use-align #f
-       :draw-shadow #t
-       :move-to-ground #t
-       :hover-if-no-ground #f
-       :use-momentum #f
-       :use-flee #f
-       :use-proximity-notice #f
-       :use-jump-blocked #f
-       :use-jump-patrol #f
-       :gnd-collide-with (collide-kind background)
-       :debug-draw-neck #f
-       :debug-draw-jump #f))
+'nav-enemy-info
+:idle-anim 3
+:walk-anim 4
+:turn-anim -1
+:notice-anim 3
+:run-anim 4
+:jump-anim 4
+:jump-land-anim 4
+:victory-anim 3
+:taunt-anim 3
+:die-anim 3
+:neck-joint 6
+:player-look-at-joint 5
+:run-travel-speed (meters 330)
+:run-rotate-speed (degrees 5999.99982)
+:run-acceleration (meters 45)
+:run-turn-time (seconds 0.002)
+:walk-travel-speed (meters 330)
+:walk-rotate-speed (degrees 15999.99982)
+:walk-acceleration (meters 13)
+:walk-turn-time (seconds 0.05)
+:attack-shove-back (meters 3)
+:attack-shove-up (meters 2)
+:shadow-size (meters 2)
+:notice-nav-radius (meters 1)
+:nav-nearest-y-threshold (meters 10)
+:notice-distance (meters 30)
+:stop-chase-distance (meters 40)
+:frustration-distance (meters 8)
+:frustration-time (seconds 00.4)
+:die-anim-hold-frame 00000000000.2
+:jump-anim-start-frame 0.00
+:jump-land-anim-end-frame 0.000
+:jump-height-min (meters 0)
+:jump-height-factor 0.0
+:jump-start-anim-speed 0.0
+:shadow-max-y (meters 1)
+:shadow-min-y (meters -1)
+:shadow-locus-dist (meters 150)
+:use-align #f
+:draw-shadow #t
+:move-to-ground #t
+:hover-if-no-ground #f
+:use-momentum #f
+:use-flee #f
+:use-proximity-notice #f
+:use-jump-blocked #f
+:use-jump-patrol #f
+:gnd-collide-with (collide-kind background)
+:debug-draw-neck #f
+:debug-draw-jump #f))
+
 
 (defmethod init-from-entity! ((this muse) (arg0 entity-actor))
   (stack-size-set! (-> this main-thread) 512)
